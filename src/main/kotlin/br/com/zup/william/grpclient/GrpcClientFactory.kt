@@ -1,5 +1,6 @@
 package br.com.zup.william.grpclient
 
+import br.com.zup.william.BuscarKeyManagerPixGRPCServiceGrpc
 import br.com.zup.william.RegistraKeyManagerPixGRPCServiceGrpc
 import br.com.zup.william.RemoveKeyManagerPixGRPCServiceGrpc
 import io.grpc.ManagedChannel
@@ -15,5 +16,8 @@ class GrpcClientFactory(@GrpcChannel("pix") val channel: ManagedChannel) {
 
     @Singleton
     fun removeChave() = RemoveKeyManagerPixGRPCServiceGrpc.newBlockingStub(channel)
+
+    @Singleton
+    fun buscarChave() = BuscarKeyManagerPixGRPCServiceGrpc.newBlockingStub(channel)
 
 }
