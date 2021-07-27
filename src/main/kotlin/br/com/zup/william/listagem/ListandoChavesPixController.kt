@@ -15,7 +15,7 @@ class ListandoChavesPixController(
 ) {
     @Get("listar")
     fun lista(@PathVariable("clienteId") clienteId: String):
-            HttpResponse<List<ListaResponseRest>> {
+            HttpResponse<Any> {
 
         val request = grpcClient.listar(
                 ListarChavePixRequest

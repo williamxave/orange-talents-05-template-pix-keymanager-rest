@@ -34,7 +34,7 @@ message ListarChavePixResponse{
     TipoDeChave tipoDeChave = 3;
     string valorDaChave = 4;
     TipoDeConta tipoDeConta = 5;
-    google.protobuf.Timestamp criadaEm= 6;
+    google.protobuf.Timestamp criadaEm = 6;
   }
   string clientId = 1;
   repeated Listar chaves = 2;
